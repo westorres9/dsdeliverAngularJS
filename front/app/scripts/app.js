@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name frontendApp
+ * @name frontApp
  * @description
- * # frontendApp
+ * # frontApp
  *
  * Main module of the application.
  */
 angular
-  .module('frontendApp', [
+  .module('frontApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -22,7 +22,12 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'vm'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'vm'
       })
       .otherwise({
         redirectTo: '/'
