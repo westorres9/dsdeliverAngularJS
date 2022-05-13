@@ -21,10 +21,27 @@
         <a href="" class="nav-link">Pedidos</a>
         <a href="" class="nav-link"><img ng-controller="GitHubController" ng-src="{{github.image}}" alt="{{github.title}}" width="25px" height="25px"></a>
     </nav>
-    <h1>DsDeliver</h1>
+    <div ng-controller="HomeController" ng-view="home">
+        <div class="home-container">
+            <div class="home-content">
+                <div class="home-actions">
+                  <h1 class="home-title">Faça seu pedido <br />
+                  que entregamos <br /> pra você</h1>
+                  <h3 class="home-subtitle">Escolha seu pedido e em poucos minutos <br /> levaremos na sua porta</h3>
+                  <a href="orders" class="home-btn-order">
+                      FAZER PEDIDO
+                  </a>
+                </div>
+                <div class="home-image">
+                    <img ng-controller="HomeController" ng-src="{{home.image}}" alt="{{home.image}}">
+                </div>
+            </div>
+          </div>
+    </div>
     <script src="/angular/angular.js"></script>
     <script src="/app/js/main.js"></script>
     <script src="/app/js/controllers/logo.js"></script>
     <script src="/app/js/controllers/github.js"></script>
+    <script src="/app/js/controllers/home.js"></script>
 </body>
 </html>
